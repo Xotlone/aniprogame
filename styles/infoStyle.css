@@ -1,0 +1,55 @@
+#desc p {
+    font-size: 20px;
+    border: 3px solid rgb(200, 0, 0);
+    padding: 30px;
+}
+
+#rulesList {
+    border: 3px solid rgb(200, 0, 0);
+}
+
+#rules li {
+    border-bottom: 1px dashed rgb(200, 0, 0);
+    padding: 10px;
+}
+
+#rules li:last-child {
+    border: 0;
+}
+
+#moderation #content {
+    list-style: none;
+    border: 3px solid rgb(200, 0, 0);
+    padding: 30px;
+}
+
+#moderation #content li:first-child h2 {
+    margin-top: 0;
+}
+
+.mod {
+    min-height: 150px;
+    background-color: rgb(67, 69, 74);
+    border: 3px solid rgb(200, 0, 0);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.mod h2 {
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.mod img {
+    float: left;
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgb(200, 0, 0);
+    border-radius: 75px;
+    margin-right: 10px;
+}
+
+.moder {
+    margin-bottom: 20px;
+}
