@@ -8,14 +8,11 @@
     to {opacity: 100%;}
 }
 
-@keyframes fadeLeft {
-    from {transform: translateX(-1200px);}
-    to {transform: translateX(auto);}
-}
-
-@keyframes fadeRight {
-    from {transform: translateX(1300px);}
-    to {transform: translateX(auto);}
+@keyframes topMove {
+    0% {
+        transform: translateY(-150%);
+        transform: translateY(auto);
+    }
 }
 
 body {
@@ -29,8 +26,10 @@ body {
 }
 
 #avatar {
-    animation-name: fadeLeft;
-    animation-duration: 3s;
+    animation: ease-in-out topMove 1.5s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #name {
@@ -38,7 +37,7 @@ body {
     color: white;
     text-align: center;
     text-shadow: 5px 5px 0 rgb(200, 0, 0);
-    animation-name: fadeRight;
+    animation-name: opacityOn;
     animation-duration: 3s;
 }
 
@@ -49,19 +48,24 @@ nav {
 }
 
 nav ul {
+    width: 80%;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: inline;
+    display: grid;
+}
+
+nav > ul {
+    grid-template-columns: 300px 300px 300px;
+    grid-column-gap: 40px;
+    margin: 0;
+    padding: 0;
+    justify-content : center;
+    margin: 0 auto 0 auto;
 }
 
 nav > ul > li {
-    padding: 10px 10px;
-}
-
-nav ul > li {
-    display: inline-block;
-    position: relative;
+    padding: 10px 0;
 }
 
 nav ul a {
@@ -71,28 +75,25 @@ nav ul a {
 }
 
 nav > ul > li > a {
-    width: 200px;
     padding: 10px 15px;
     border-top: 1px solid rgb(200, 0, 0);
     border-bottom: 1px solid rgb(200, 0, 0);
-    position: relative;
 }
 
-nav > ul > li:first-child > a {
-    margin-left: 0;
-}
-
-nav ul > li > ul {
+nav > ul > li > ul {
     display: none;
     position: absolute;
-    width: 200px;
-    animation-name: opacityOff;
-    animation-duration: 0.5s;
+    width: 300px;
     margin-top: -1px;
 }
 
+nav > ul > li:hover > ul {
+    display: block;
+    animation-name: opacityOn;
+    animation-duration: 0.5s;
+}
+
 nav ul > li > ul > li {
-    width: 200px;
     padding: 10px 15px;
     border-bottom: 1px solid rgb(200, 0, 0);
     position: relative;
@@ -105,18 +106,30 @@ nav ul > li > ul > li:first-child {
     border-top: 1px solid rgb(200, 0, 0);
 }
 
-nav > ul > li:hover ul {
-    display: block;
-    animation-name: opacityOn;
-    animation-duration: 0.5s;
-}
-
 nav > ul > li:hover > a {
     background-color: rgb(67, 69, 74);
 }
 
 nav ul ul a:hover, nav ul > li:hover > a {
     color: rgb(200, 0, 0)
+}
+
+div#content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+aside {
+    margin: 20px;
+}
+
+aside iframe {
+    width: 100%;
+    height: 100%;
+}
+
+article {
+    display: grid;
 }
 
 section {
@@ -128,23 +141,9 @@ section:last-child {
     padding-bottom: 10px;
 }
 
-section, footer {
-    width: 60%;
-    margin-left: 20%;
-}
-
 section > h1 {
     text-align: center;
     font-size: 50px;
-}
-
-aside {
-    position: absolute;
-    margin-left: 62%;
-}
-aside iframe {
-    width: 100%;
-    height: 500px;
 }
 
 .lineThrough {
