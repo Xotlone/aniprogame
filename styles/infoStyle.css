@@ -35,6 +35,10 @@
     padding: 20px;
 }
 
+.mod div {
+    display: inline-block;
+}
+
 .mod h2 {
     font-size: 20px;
     margin: 0;
