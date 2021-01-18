@@ -2,44 +2,44 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/graphicsStyle.css">
-        <link rel="icon" href="files/aniprogameAvatar.png" type = "image/x-icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/graphicsStyle.css') }}">
+        <link rel="icon" href="{{ url_for('static', filename='aniprogameAvatar.png') }}" type = "image/x-icon">
         <script src="script.js"></script>
         <title>ANIPROGAME</title>
     </head>
     <body>
         <header>
-            <img id="avatar" src="files/aniprogameAvatar.png"></img>
+            <img id="avatar" src="{{ url_for('static', filename='aniprogameAvatar.png') }}"></img>
             <h1 id="name">ANIPROGAME</h1>
         </header>
         <nav>
             <ul>
-                <li><a href="index.html">ГЛАВНАЯ</a>
+                <li><a href="index">ГЛАВНАЯ</a>
                     <ul>
-                        <li><a href="index.html#news">НОВОСТИ</a></li>
-                        <li><a href="index.html#invite">ПРИГЛАШЕНИЕ</a></li>
+                        <li><a href="index#news">НОВОСТИ</a></li>
+                        <li><a href="index#invite">ПРИГЛАШЕНИЕ</a></li>
                     </ul>
                 </li>
-                <li><a href="info.html">ИНФОРМАЦИЯ</a>
+                <li><a href="info">ИНФОРМАЦИЯ</a>
                     <ul>
-                        <li><a href="info.html#desc">ОПИСАНИЕ</a></li>
-                        <li><a href="info.html#rules">ПРАВИЛА</a></li>
-                        <li><a href="info.html#moderation">МОДЕРАЦИЯ</a></li>
+                        <li><a href="info#desc">ОПИСАНИЕ</a></li>
+                        <li><a href="info#rules">ПРАВИЛА</a></li>
+                        <li><a href="info#moderation">МОДЕРАЦИЯ</a></li>
                     </ul>
                 </li>
-                <li><a href="graphics.html">ГРАФИКИ DISCORDSERVER</a>
+                <li><a href="graphics">ГРАФИКИ DISCORDSERVER</a>
                     <ul>
-                        <li><a href="graphics.html#members">УЧАСТНИКИ</a></li>
-                        <li><a href="graphics.html#activity">АКТИВНОСТЬ</a></li>
-                        <li><a href="graphics.html#messages">СООБЩЕНИЯ</a></li>
-                        <li><a href="graphics.html#online">ОНЛАЙН</a></li>
+                        <li><a href="graphics#members">УЧАСТНИКИ</a></li>
+                        <li><a href="graphics#activity">АКТИВНОСТЬ</a></li>
+                        <li><a href="graphics#messages">СООБЩЕНИЯ</a></li>
+                        <li><a href="graphics#online">ОНЛАЙН</a></li>
                     </ul>
                 </li>
-                <li><a href="bot.html">БОТ</a>
+                <li><a href="bot">БОТ</a>
                     <ul>
-                        <li><a href="bot.html#desc">ОПИСАНИЕ</a></li>
-                        <li><a href="bot.html#commands">КОМАНДЫ</a></li>
+                        <li><a href="bot#desc">ОПИСАНИЕ</a></li>
+                        <li><a href="bot#commands">КОМАНДЫ</a></li>
                     </ul>
                 </li>
             </ul>
